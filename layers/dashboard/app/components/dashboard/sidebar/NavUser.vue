@@ -10,11 +10,9 @@ interface User {
 
 const { isMobile } = useSidebar()
 
+const { siteURL } = useAppConfig()
 const hostname = computed<string>(() => {
-  if (import.meta.client) {
-    return window.location.hostname
-  }
-  return 'localhost'
+  return siteURL ? new URL(siteURL).hostname : (import.meta.client ? window.location.hostname : 'localhost')
 })
 
 const user = computed<User>(() => ({
