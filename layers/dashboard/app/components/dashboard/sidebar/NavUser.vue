@@ -16,9 +16,9 @@ const hostname = computed<string>(() => {
 })
 
 const user = computed<User>(() => ({
-  name: 'Root',
+  name: 'Google Workspace Authenticated',
   email: `root@${hostname.value}`,
-  avatar: '/sink.png',
+  avatar: 'https://gravatar.com/avatar/fcf18f6327cd6b5f2be9262e95820e1c05859b9002967569f7da6026832fc89f',
 }))
 
 function logOut() {
