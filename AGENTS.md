@@ -196,3 +196,9 @@ Server utils in `server/utils/` are auto-imported:
 - `deleteLink(event, slug)` - Remove link from KV
 - `normalizeSlug(event, slug)` - Case normalization
 - `buildShortLink(event, slug)` - Construct full URL
+
+## Git / PR Rules
+
+- All PRs must target `onyst-it/Sink` as the base repository, branch `main`
+- Never target `miantiao-me/Sink` or any upstream fork as the PR base
+- When creating a PR via GitHub API, always set `base` to `main` and `head` to the current branch within `onyst-it/Sink`
